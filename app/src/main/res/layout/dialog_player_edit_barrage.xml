@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:background="@color/color_FFFFFF"
+        android:gravity="center_vertical"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="50dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp_5"
+        android:paddingRight="@dimen/dp_5">
+
+        <EditText
+            android:id="@+id/et_edit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="弹幕还是要发的，万一火了呢~"
+            android:imeOptions="flagNoExtractUi"
+            android:maxLines="1"
+            android:padding="0dp"
+            android:textColor="#333333"
+            android:textColorHint="#999999"
+            android:textSize="@dimen/sp_12"/>
+
+        <TextView
+            android:id="@+id/tv_send"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/bg_btn_send_danmaku"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_10"
+            android:text="发射"
+            android:textColor="@color/color_FFFFFF"
+            android:textSize="@dimen/sp_13"/>
+
+    </LinearLayout>
+
+
+</FrameLayout>
