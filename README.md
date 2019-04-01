@@ -1,5 +1,5 @@
 # DemoLite
-我的一些初级demo集合：
+我的一些demo集合：
 
 1. ConstraintsLayout
 2. DialogFragment
