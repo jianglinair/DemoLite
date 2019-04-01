@@ -10,7 +10,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity
+            android:name=".constraint.ConstraintAdvancedActivity"
+            android:label="@string/title_activity_constraint_advanced"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
         <!-- activity -->
         <activity
             android:name=".MainActivity"
@@ -24,20 +28,16 @@
         </activity>
         <activity android:name=".seek.SeekImageActivity">
         </activity>
-        <activity android:name=".constraints.ConstraintLayoutActivity">
+        <activity android:name=".constraint.ConstraintLayoutActivity">
         </activity>
         <activity
             android:name=".danmaku.DanmakuActivity"
             android:screenOrientation="landscape">
         </activity>
-        <activity android:name=".constraints.TestConstraintsActivity">
-        </activity>
         <activity android:name=".expandable.ExpandableTextViewActivity">
         </activity>
         <activity android:name=".aidl.AidlActivity">
-        </activity>
-
-        <!-- service -->
+        </activity> <!-- service -->
         <service
             android:name=".aidl.BookManagerService"
             android:enabled="true"

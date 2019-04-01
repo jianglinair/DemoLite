@@ -10,7 +10,8 @@ import android.widget.Toast;
 import com.lin.jiang.app.aidl.AidlActivity;
 import com.lin.jiang.app.aidl.Book;
 import com.lin.jiang.app.aidl.BookIntentService;
-import com.lin.jiang.app.constraints.ConstraintLayoutActivity;
+import com.lin.jiang.app.constraint.ConstraintAdvancedActivity;
+import com.lin.jiang.app.constraint.ConstraintLayoutActivity;
 import com.lin.jiang.app.danmaku.DanmakuActivity;
 import com.lin.jiang.app.expandable.ExpandableTextViewActivity;
 import com.lin.jiang.app.seek.SeekImageActivity;
@@ -27,7 +28,6 @@ import butterknife.OnClick;
  * @author Jiang Lin
  */
 public class MainActivity extends AppCompatActivity {
-    private static final String TAG = "MainActivity";
     @BindView(R.id.btn_aidl_test)
     Button mBtnAidlTest;
     @BindView(R.id.btn_is_test)
@@ -42,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
     Button mBtnExtvTest;
     @BindView(R.id.btn_seek_img_test)
     Button mBtnSeekImgTest;
+    @BindView(R.id.btn_constraint_advanced_test)
+    Button mBtnConstraintAdvancedTest;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -95,13 +97,6 @@ public class MainActivity extends AppCompatActivity {
         printDir();
     }
 
-    @OnClick(R.id.btn_constraint_test)
-    public void onMBtnConstraintTestClicked() {
-        // ConstraintLayoutActivity test
-        Intent intent = new Intent(this, ConstraintLayoutActivity.class);
-        startActivity(intent);
-    }
-
     @OnClick(R.id.btn_danmaku_test)
     public void onMBtnDanmakuTestClicked() {
         // bilibili danmaku test
@@ -120,6 +115,19 @@ public class MainActivity extends AppCompatActivity {
     public void onMBtnSeekImgTestClicked() {
         // Seek image test
         Intent intent = new Intent(this, SeekImageActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.btn_constraint_test)
+    public void onMBtnConstraintTestClicked() {
+        // ConstraintLayoutActivity test
+        Intent intent = new Intent(this, ConstraintLayoutActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.btn_constraint_advanced_test)
+    public void onMBtnConstraintAdvancedTestClicked() {
+        Intent intent = new Intent(this, ConstraintAdvancedActivity.class);
         startActivity(intent);
     }
 }

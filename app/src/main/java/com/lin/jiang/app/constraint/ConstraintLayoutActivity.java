@@ -1,15 +1,16 @@
-package com.lin.jiang.app.constraints;
+package com.lin.jiang.app.constraint;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.lin.jiang.app.R;
 
-public class TestConstraintsActivity extends AppCompatActivity {
+
+public class ConstraintLayoutActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test_contraints);
+        setContentView(R.layout.activity_constraints_layout);
     }
 }

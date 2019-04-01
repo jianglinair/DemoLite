@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#11ff0000"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".constraint.ConstraintAdvancedActivity"
+    tools:showIn="@layout/activity_constraint_advanced">
+
+    <TextView
+        android:id="@+id/tv_banner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#765"
+        android:gravity="center"
+        android:text="Banner"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_left"
+        android:layout_width="@dimen/dp_140"
+        android:layout_height="@dimen/dp_86"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#fd3"
+        android:contentDescription="左侧色块"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_banner"/>
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:ellipsize="end"
+        android:text="ConstraintLayout 使用可视化布局拖拽"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_left"
+        app:layout_constraintTop_toTopOf="@id/tv_left"/>
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2019/04/01"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_left"
+        app:layout_constraintStart_toStartOf="@+id/tv_desc"/>
+
+    <TextView
+        android:id="@+id/tv_tab1"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_30"
+        android:background="@color/color_red"
+        android:gravity="center"
+        android:text="Tab1"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_tab2"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_tab2"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_30"
+        android:background="@color/color_green"
+        android:gravity="center"
+        android:text="Tab2"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_tab3"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/tv_tab1"
+        />
+
+    <TextView
+        android:id="@+id/tv_tab3"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_30"
+        android:background="@color/color_blue"
+        android:gravity="center"
+        android:text="Tab3"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/tv_tab2"/>
+
+    <TextView
+        android:id="@+id/tv_fab"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        android:background="#612"
+        android:gravity="center"
+        android:text="+"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_20"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

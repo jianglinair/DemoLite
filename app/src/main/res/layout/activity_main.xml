@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/dp_15"
+    android:padding="@dimen/dp_16"
     android:scrollbars="none"
     >
 
@@ -29,6 +29,13 @@
             android:text="IntentService Test"
             android:textSize="20sp"/>
 
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            />
+
         <Button
             android:id="@+id/btn_dir_test"
             style="@style/SimpleButton"
@@ -36,6 +43,58 @@
             android:layout_height="wrap_content"
             android:text="DIR Test"
             android:textSize="20sp"/>
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            />
+
+        <Button
+            android:id="@+id/btn_danmaku_test"
+            style="@style/SimpleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Danmaku Test"
+            android:textSize="20sp"/>
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            />
+
+        <Button
+            android:id="@+id/btn_expandable_tv_test"
+            style="@style/SimpleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ExpandableTextView Test"
+            android:textSize="20sp"/>
+
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            />
+
+        <Button
+            android:id="@+id/btn_seek_img_test"
+            style="@style/SimpleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SeekImage Test"
+            android:textSize="20sp"/>
+
+        <View
+            android:id="@+id/divider5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            />
 
         <Button
             android:id="@+id/btn_constraint_test"
@@ -46,27 +105,11 @@
             android:textSize="20sp"/>
 
         <Button
-            android:id="@+id/btn_danmaku_test"
+            android:id="@+id/btn_constraint_advanced_test"
             style="@style/SimpleButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Danmaku Test"
-            android:textSize="20sp"/>
-
-        <Button
-            android:id="@+id/btn_expandable_tv_test"
-            style="@style/SimpleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ExpandableTextView Test"
-            android:textSize="20sp"/>
-
-        <Button
-            android:id="@+id/btn_seek_img_test"
-            style="@style/SimpleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="SeekImage Test"
+            android:text="ConstraintLayout Advanced"
             android:textSize="20sp"/>
     </LinearLayout>
 
