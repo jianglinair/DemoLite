@@ -30,7 +30,7 @@ public class CustomDialogFragment2 extends DialogFragment {
         Window window = getDialog().getWindow();
         if (window != null) {
             window.setBackgroundDrawableResource(android.R.color.transparent);
-//            window.getDecorView().setPadding(0, 0, 0, 0);
+            //            window.getDecorView().setPadding(0, 0, 0, 0);
             WindowManager.LayoutParams params = window.getAttributes();
             params.width = WindowManager.LayoutParams.WRAP_CONTENT;
             params.height = WindowManager.LayoutParams.WRAP_CONTENT;

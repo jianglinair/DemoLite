@@ -11,20 +11,44 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.lin.jiang.app.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.VIEW"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name="com.lin.jiang.app.seek.SeekImageActivity">
+        <activity android:name=".seek.SeekImageActivity">
         </activity>
-        <activity android:name="com.lin.jiang.app.constraints.ConstraintsLayoutActivity">
+        <activity android:name=".constraints.ConstraintsLayoutActivity">
         </activity>
-        <activity android:name="com.lin.jiang.app.danmaku.DanmakuActivity"
+        <activity
+            android:name=".danmaku.DanmakuActivity"
             android:screenOrientation="landscape">
         </activity>
+        <activity android:name=".constraints.TestConstraintsActivity">
+        </activity>
+        <activity android:name=".expandable.ExpandableTextViewActivity">
+        </activity>
+        <activity android:name=".view.DrawActivity">
+        </activity>
+
+        <service
+            android:name=".aidl.BookManagerService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":BookManagerService">
+        </service>
+
+        <activity android:name=".aidl.AidlActivity">
+        </activity>
+
+        <service
+            android:name=".aidl.BookIntentService"
+            android:exported="false"
+            android:process=":BookIntentService">
+        </service>
     </application>
 
 </manifest>

@@ -24,6 +24,7 @@ public class DanmakuActivity extends AppCompatActivity {
     private DanmakuView mDanmakuView;
     private DanmakuContext mDanmakuContext;
     private AcFunDanmakuParser mDanmakuParser;
+    private int mCount = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +73,10 @@ public class DanmakuActivity extends AppCompatActivity {
         initDanmaku();
     }
 
+    private void sendTextMessage() {
+        addDanmaku(true);
+    }
+
     private void initDanmaku() {
         ALog.d("initDanmaku: IN");
         mDanmakuContext = DanmakuContext.create();
@@ -114,7 +119,7 @@ public class DanmakuActivity extends AppCompatActivity {
 
             @Override
             public void danmakuShown(BaseDanmaku danmaku) {
-//                ALog.d("danmakuShown: " + danmaku.text);
+                //                ALog.d("danmakuShown: " + danmaku.text);
             }
 
             @Override
@@ -124,11 +129,6 @@ public class DanmakuActivity extends AppCompatActivity {
         });
     }
 
-    private void sendTextMessage() {
-        addDanmaku(true);
-    }
-
-    private int mCount = 1;
     private void addDanmaku(boolean isLive) {
         BaseDanmaku danmaku = mDanmakuContext.mDanmakuFactory.createDanmaku(BaseDanmaku.TYPE_SCROLL_RL);
         if (danmaku == null || mDanmakuView == null) {
@@ -160,6 +160,16 @@ public class DanmakuActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (mDanmakuView != null) {
+            // dont forget release!
+            mDanmakuView.release();
+            mDanmakuView = null;
+        }
+    }
+
+    @Override
     protected void onPause() {
         super.onPause();
         if (mDanmakuView != null && mDanmakuView.isPrepared()) {
@@ -172,16 +182,6 @@ public class DanmakuActivity extends AppCompatActivity {
         super.onResume();
         if (mDanmakuView != null && mDanmakuView.isPrepared() && mDanmakuView.isPaused()) {
             mDanmakuView.resume();
-        }
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        if (mDanmakuView != null) {
-            // dont forget release!
-            mDanmakuView.release();
-            mDanmakuView = null;
         }
     }
 }

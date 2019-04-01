@@ -15,7 +15,7 @@ import android.view.View;
  */
 public class CustomImageView extends View {
     private static final String TAG = "CustomImageView";
-
+    Matrix mMatrix;
     /**
      * 原始 bitmap
      */
@@ -24,14 +24,21 @@ public class CustomImageView extends View {
      * 适配小窗口的 bitmap
      */
     private Bitmap mAdaptedBitmap;
-
     private int mWindowWidth = 400;
     private int mWindowHeight = 225;
-    Matrix mMatrix;
 
     public CustomImageView(Context context) {
         super(context);
         matrix();
+    }
+
+    private void matrix() {
+        // 计算缩放比例
+        float scaleWidth = ((float) mWindowWidth) / 200;
+        float scaleHeight = ((float) mWindowHeight) / 112;
+        // 取得想要缩放的 matrix 参数
+        mMatrix = new Matrix();
+        mMatrix.postScale(scaleWidth, scaleHeight);
     }
 
     public CustomImageView(Context context, @Nullable AttributeSet attrs) {
@@ -76,14 +83,5 @@ public class CustomImageView extends View {
         mOriginalBitmap = bitmap;
         mAdaptedBitmap = Bitmap.createBitmap(mOriginalBitmap);
         invalidate();
-    }
-
-    private void matrix() {
-        // 计算缩放比例
-        float scaleWidth = ((float) mWindowWidth) / 200;
-        float scaleHeight = ((float) mWindowHeight) / 112;
-        // 取得想要缩放的 matrix 参数
-        mMatrix = new Matrix();
-        mMatrix.postScale(scaleWidth, scaleHeight);
     }
 }

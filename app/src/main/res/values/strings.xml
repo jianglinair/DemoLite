@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">MyApp</string>
     <string name="done">完成</string>
+
+    <string name="vip_fail_retry_remind"><font color='#FFFFFF'>付费视频，请</font><font color='#FF5F00'><u>观看正片</u></font></string>
+
+    <string name="permission_label">芒果TV后台服务权限</string>
+    <string name="permission_desc">芒果TV后台服务是芒果TV用于APP数据收集的服务</string>
 </resources>

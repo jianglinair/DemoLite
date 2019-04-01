@@ -21,10 +21,10 @@ public class App extends Application {
         initALog();
     }
 
-    public void initALog() {
+    private void initALog() {
         ALog.Config config = ALog.init(this)
-//                .setLogSwitch(BuildConfig.DEBUG)// 设置 log 总开关，包括输出到控制台和文件，默认开
-//                .setConsoleSwitch(BuildConfig.DEBUG)// 设置是否输出到控制台开关，默认开
+                //                .setLogSwitch(BuildConfig.DEBUG)// 设置 log 总开关，包括输出到控制台和文件，默认开
+                //                .setConsoleSwitch(BuildConfig.DEBUG)// 设置是否输出到控制台开关，默认开
                 .setGlobalTag("[jianglin]")// 设置 log 全局标签，默认为空
                 // 当全局标签不为空时，我们输出的 log 全部为该 tag，
                 // 为空时，如果传入的 tag 为空那就显示类名，否则显示 tag
@@ -36,7 +36,7 @@ public class App extends Application {
                 .setSingleTagSwitch(true)// 一条日志仅输出一条，默认开，为美化 AS 3.1 的 Logcat
                 .setConsoleFilter(ALog.V)// log 的控制台过滤器，和 logcat 过滤器同理，默认 Verbose
                 .setFileFilter(ALog.V)// log 文件过滤器，和 logcat 过滤器同理，默认 Verbose
-                .setStackDeep(3)// log 栈深度，默认为 1
+                .setStackDeep(1)// log 栈深度，默认为 1
                 .setStackOffset(0)// 设置栈偏移，比如二次封装的话就需要设置，默认为 0
                 .setSaveDays(3)// 设置日志可保留天数，默认为 -1 表示无限时长
                 // 新增 ArrayList 格式化器，默认已支持 Array, Throwable, Bundle, Intent 的格式化输出

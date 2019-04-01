@@ -18,7 +18,6 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
-
 import com.lin.jiang.app.R;
 
 import static android.os.Build.VERSION_CODES.JELLY_BEAN_MR2;
@@ -36,27 +35,8 @@ public class CustomDialogFragment extends DialogFragment {
     private EditText mEtInputDanmaku;
     private CustomDialogFragmentCallback mCallback;
 
-    interface CustomDialogFragmentCallback {
-        void onSendButtonClick(String danmaku);
-
-        void removeOnGlobalLayoutListener();
-    }
-
     public void addCallback(CustomDialogFragmentCallback callback) {
         this.mCallback = callback;
-    }
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        this.mContext = context;
-    }
-
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // DialogFragment.STYLE_NO_FRAME 设置此 style 返回的 view 完全是自定义的，不会给 dialog 加 margin
-        setStyle(DialogFragment.STYLE_NO_FRAME, 0);
     }
 
     @Nullable
@@ -130,5 +110,24 @@ public class CustomDialogFragment extends DialogFragment {
         if (mCallback != null) {
             mCallback.removeOnGlobalLayoutListener();
         }
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        this.mContext = context;
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // DialogFragment.STYLE_NO_FRAME 设置此 style 返回的 view 完全是自定义的，不会给 dialog 加 margin
+        setStyle(DialogFragment.STYLE_NO_FRAME, 0);
+    }
+
+    interface CustomDialogFragmentCallback {
+        void onSendButtonClick(String danmaku);
+
+        void removeOnGlobalLayoutListener();
     }
 }
