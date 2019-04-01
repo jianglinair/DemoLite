@@ -3,17 +3,22 @@ package com.lin.jiang.app;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
 import com.lin.jiang.app.aidl.AidlActivity;
 import com.lin.jiang.app.aidl.Book;
 import com.lin.jiang.app.aidl.BookIntentService;
+import com.lin.jiang.app.constraints.ConstraintLayoutActivity;
+import com.lin.jiang.app.danmaku.DanmakuActivity;
+import com.lin.jiang.app.expandable.ExpandableTextViewActivity;
+import com.lin.jiang.app.seek.SeekImageActivity;
 
+import java.util.Objects;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -29,6 +34,14 @@ public class MainActivity extends AppCompatActivity {
     Button mBtnIsTest;
     @BindView(R.id.btn_dir_test)
     Button mBtnDirTest;
+    @BindView(R.id.btn_constraint_test)
+    Button mBtnConstraintTest;
+    @BindView(R.id.btn_danmaku_test)
+    Button mBtnDanmakuTest;
+    @BindView(R.id.btn_expandable_tv_test)
+    Button mBtnExtvTest;
+    @BindView(R.id.btn_seek_img_test)
+    Button mBtnSeekImgTest;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -41,32 +54,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
-    @OnClick({R.id.btn_aidl_test, R.id.btn_is_test, R.id.btn_dir_test})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.btn_aidl_test:
-                // aidl test
-                Intent intent = new Intent(this, AidlActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.btn_is_test:
-                // IntentService test
-                BookIntentService.startActionQuery(this, new Book(5, "Book#5"));
-                break;
-            case R.id.btn_dir_test:
-                printDir();
-                break;
-            default:
-                break;
-        }
-    }
-
     private void printDir() {
         String cacheDir = getCacheDir().getPath();
         String filesDir = getFilesDir().getPath();
-        String externalCacheDir = getExternalCacheDir().getPath();
-        String externalFilesDir = getExternalFilesDir(null).getPath();
+        String externalCacheDir = Objects.requireNonNull(getExternalCacheDir()).getPath();
+        String externalFilesDir = Objects.requireNonNull(getExternalFilesDir(null)).getPath();
         String externalStorageDirectory = Environment.getExternalStorageDirectory().getPath();
         String externalStoragePublicDirectory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).getPath();
         Log.d("[jianglin]", "MainActivity.printDir: \n" +
@@ -82,5 +74,52 @@ public class MainActivity extends AppCompatActivity {
                 "getExternalFilesDir=" + externalFilesDir + "\n" +
                 "Environment.getExternalStorageDirectory=" + externalStorageDirectory + "\n" +
                 "Environment.getExternalStoragePublicDirectory=" + externalStoragePublicDirectory, Toast.LENGTH_LONG).show();
+    }
+
+    @OnClick(R.id.btn_aidl_test)
+    public void onMBtnAidlTestClicked() {
+        // aidl test
+        Intent intent = new Intent(this, AidlActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.btn_is_test)
+    public void onMBtnIsTestClicked() {
+        // IntentService test
+        BookIntentService.startActionQuery(this, new Book(5, "Book#5"));
+    }
+
+    @OnClick(R.id.btn_dir_test)
+    public void onMBtnDirTestClicked() {
+        // 内部存储测试
+        printDir();
+    }
+
+    @OnClick(R.id.btn_constraint_test)
+    public void onMBtnConstraintTestClicked() {
+        // ConstraintLayoutActivity test
+        Intent intent = new Intent(this, ConstraintLayoutActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.btn_danmaku_test)
+    public void onMBtnDanmakuTestClicked() {
+        // bilibili danmaku test
+        Intent intent = new Intent(this, DanmakuActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.btn_expandable_tv_test)
+    public void onMBtnExpandableTvTestClicked() {
+        // ExpandableTextView test
+        Intent intent = new Intent(this, ExpandableTextViewActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.btn_seek_img_test)
+    public void onMBtnSeekImgTestClicked() {
+        // Seek image test
+        Intent intent = new Intent(this, SeekImageActivity.class);
+        startActivity(intent);
     }
 }

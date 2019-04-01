@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context=".seek.SeekImageActivity">
 
-    <com.jiang.lin.demo.seek.CustomImageView
+    <com.lin.jiang.app.seek.CustomImageView
         android:id="@+id/civ_window"
         android:layout_width="400px"
         android:layout_height="225px"

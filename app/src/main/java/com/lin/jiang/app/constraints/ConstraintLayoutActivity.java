@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.lin.jiang.app.R;
 
 
-public class ConstraintsLayoutActivity extends AppCompatActivity {
+public class ConstraintLayoutActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest package="com.lin.jiang.app"
-          xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools">
+          xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
         android:name=".App"
@@ -11,7 +10,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+
+        <!-- activity -->
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <action android:name="android.intent.action.VIEW"/>
@@ -21,7 +24,7 @@
         </activity>
         <activity android:name=".seek.SeekImageActivity">
         </activity>
-        <activity android:name=".constraints.ConstraintsLayoutActivity">
+        <activity android:name=".constraints.ConstraintLayoutActivity">
         </activity>
         <activity
             android:name=".danmaku.DanmakuActivity"
@@ -31,19 +34,16 @@
         </activity>
         <activity android:name=".expandable.ExpandableTextViewActivity">
         </activity>
-        <activity android:name=".view.DrawActivity">
+        <activity android:name=".aidl.AidlActivity">
         </activity>
 
+        <!-- service -->
         <service
             android:name=".aidl.BookManagerService"
             android:enabled="true"
             android:exported="false"
             android:process=":BookManagerService">
         </service>
-
-        <activity android:name=".aidl.AidlActivity">
-        </activity>
-
         <service
             android:name=".aidl.BookIntentService"
             android:exported="false"

@@ -15,7 +15,7 @@
 
         <Button
             android:id="@+id/btn_aidl_test"
-            style="@style/Widget.AppCompat.Button"
+            style="@style/SimpleButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="AIDL Test"
@@ -23,7 +23,7 @@
 
         <Button
             android:id="@+id/btn_is_test"
-            style="@style/Widget.AppCompat.Button"
+            style="@style/SimpleButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="IntentService Test"
@@ -31,10 +31,42 @@
 
         <Button
             android:id="@+id/btn_dir_test"
-            style="@style/Widget.AppCompat.Button"
+            style="@style/SimpleButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="DIR Test"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/btn_constraint_test"
+            style="@style/SimpleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ConstraintLayout Test"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/btn_danmaku_test"
+            style="@style/SimpleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Danmaku Test"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/btn_expandable_tv_test"
+            style="@style/SimpleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ExpandableTextView Test"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/btn_seek_img_test"
+            style="@style/SimpleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SeekImage Test"
             android:textSize="20sp"/>
     </LinearLayout>
 
