@@ -1,9 +1,7 @@
 package com.lin.jiang.app.aidl;
 
-import android.app.Activity;
 import android.os.Parcel;
 import android.os.RemoteException;
-import android.support.v4.app.ActivityCompat;
 
 /**
  * Created by JiangLin.<br>

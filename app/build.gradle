@@ -1,14 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 28
     defaultConfig {
         applicationId "com.lin.jiang.app"
         minSdkVersion 15
-        targetSdkVersion 26
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -19,20 +19,27 @@ android {
     lintOptions {
         disable 'GoogleAppIndexingWarning'
     }
+    compileOptions {
+        sourceCompatibility '1.8'
+        targetCompatibility '1.8'
+    }
 }
 
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
-    api 'com.android.support:appcompat-v7:26.1.0'
-    api 'com.android.support.constraint:constraint-layout:1.1.3'
+    api 'androidx.appcompat:appcompat:1.1.0-alpha03'
+    api 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    androidTestImplementation 'androidx.test:runner:1.1.2-alpha02'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0-alpha02'
     // danmaku
     api project(path: ':danmaku')
 //    compile 'com.github.ctiao:DanmakuFlameMaster:0.9.25'
 //    compile 'com.github.ctiao:ndkbitmap-armv7a:0.9.21'
     // alog
     api 'com.blankj:alog:1.9.0'
-    api 'com.android.support:recyclerview-v7:26.1.0'
+    api 'androidx.recyclerview:recyclerview:1.1.0-alpha03'
+    // butter-knife
+    implementation 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
 }

@@ -1,7 +1,7 @@
 package com.lin.jiang.app.constraints;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.lin.jiang.app.R;
 

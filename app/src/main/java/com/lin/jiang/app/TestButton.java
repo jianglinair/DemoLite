@@ -13,7 +13,7 @@ import com.blankj.ALog;
  *
  * @author JiangLin
  */
-public class TestButton extends android.support.v7.widget.AppCompatButton {
+public class TestButton extends androidx.appcompat.widget.AppCompatButton {
     private static final String TAG = "TestButton";
     public TestButton(Context context) {
         super(context);
