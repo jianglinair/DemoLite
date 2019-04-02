@@ -5,6 +5,7 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.SeekBar;
 
 import com.lin.jiang.app.R;
@@ -19,6 +20,7 @@ public class SeekImageActivity extends AppCompatActivity {
     private static final int WINDOW_WIDTH = 200;
     private static final int WINDOW_HEIGHT = 112;
 
+    private ImageView mIvSrc;
     /**
      * 显示图片的窗口
      */
@@ -33,12 +35,14 @@ public class SeekImageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seek_image);
 
+        mIvSrc = findViewById(R.id.iv_src);
         mCustomImageView = findViewById(R.id.civ_window);
         mSeekBar = findViewById(R.id.sb_controller);
         mSeekBar.setMax(52);
         BitmapFactory.Options opts = new BitmapFactory.Options();
         opts.inSampleSize = 2;
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.seek_test_3, opts);
+        mIvSrc.setImageBitmap(bitmap);
         mCustomImageView.setOriginalBitmap(bitmap);
 
         setOnSeekBarChangeListener();

@@ -7,6 +7,14 @@
     android:orientation="vertical"
     tools:context=".seek.SeekImageActivity">
 
+    <ImageView
+        android:id="@+id/iv_src"
+        android:layout_width="@dimen/dp_320"
+        android:layout_height="@dimen/dp_180"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_100"
+        />
+
     <com.lin.jiang.app.seek.CustomImageView
         android:id="@+id/civ_window"
         android:layout_width="400px"
