@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest package="com.lin.jiang.app"
           xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
 
     <application
         android:name=".App"
@@ -10,12 +14,52 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <!-- activity -->
+        <activity
+            android:name=".autocreated.BasicActivity"
+            android:label="@string/title_activity_basic"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".autocreated.TabbedActivity"
+            android:label="@string/title_activity_tabbed"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".autocreated.SettingsActivity"
+            android:label="@string/title_activity_settings">
+        </activity>
+        <activity
+            android:name=".autocreated.ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".autocreated.NavigationDrawerActivity"
+            android:label="@string/title_activity_navigation_drawer"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".autocreated.FragmentWithViewModelActivity">
+        </activity>
+        <activity
+            android:name=".autocreated.LoginActivity"
+            android:label="@string/title_activity_login">
+        </activity>
+        <activity
+            android:name=".autocreated.FullscreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_fullscreen"
+            android:theme="@style/FullscreenTheme">
+        </activity>
+        <activity
+            android:name=".autocreated.BottomNavigationActivity"
+            android:label="@string/title_activity_bottom_navi">
+        </activity>
         <activity
             android:name=".constraint.ConstraintAdvancedActivity"
             android:label="@string/title_activity_constraint_advanced"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
-        <!-- activity -->
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">
@@ -37,7 +81,9 @@
         <activity android:name=".expandable.ExpandableTextViewActivity">
         </activity>
         <activity android:name=".aidl.AidlActivity">
-        </activity> <!-- service -->
+        </activity>
+
+        <!-- service -->
         <service
             android:name=".aidl.BookManagerService"
             android:enabled="true"

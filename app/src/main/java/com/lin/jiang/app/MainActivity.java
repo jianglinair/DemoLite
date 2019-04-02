@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -15,6 +16,15 @@ import com.lin.jiang.app.constraint.ConstraintLayoutActivity;
 import com.lin.jiang.app.danmaku.DanmakuActivity;
 import com.lin.jiang.app.expandable.ExpandableTextViewActivity;
 import com.lin.jiang.app.seek.SeekImageActivity;
+import com.lin.jiang.app.autocreated.BasicActivity;
+import com.lin.jiang.app.autocreated.BottomNavigationActivity;
+import com.lin.jiang.app.autocreated.FragmentWithViewModelActivity;
+import com.lin.jiang.app.autocreated.FullscreenActivity;
+import com.lin.jiang.app.autocreated.LoginActivity;
+import com.lin.jiang.app.autocreated.NavigationDrawerActivity;
+import com.lin.jiang.app.autocreated.ScrollingActivity;
+import com.lin.jiang.app.autocreated.SettingsActivity;
+import com.lin.jiang.app.autocreated.TabbedActivity;
 
 import java.util.Objects;
 
@@ -44,6 +54,27 @@ public class MainActivity extends AppCompatActivity {
     Button mBtnSeekImgTest;
     @BindView(R.id.btn_constraint_advanced_test)
     Button mBtnConstraintAdvancedTest;
+    @BindView(R.id.btn_coordinator_test)
+    Button mBtnCoordinatorTest;
+
+    @BindView(R.id.btn_basic_activity)
+    Button mBtnBasicActivity;
+    @BindView(R.id.btn_bottom_navigation_activity)
+    Button mBtnBottomNavigationActivity;
+    @BindView(R.id.btn_fragment_view_model_activity)
+    Button mBtnFragmentViewModelActivity;
+    @BindView(R.id.btn_fullscreen_activity)
+    Button mBtnFullscreenActivity;
+    @BindView(R.id.btn_login_activity)
+    Button mBtnLoginActivity;
+    @BindView(R.id.btn_navigation_drawer_activity)
+    Button mBtnNavigationDrawerActivity;
+    @BindView(R.id.btn_scrolling_activity)
+    Button mBtnScrollingActivity;
+    @BindView(R.id.btn_settings_activity)
+    Button mBtnSettingsActivity;
+    @BindView(R.id.btn_tabbed_activity)
+    Button mBtnTabbedActivity;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -129,5 +160,50 @@ public class MainActivity extends AppCompatActivity {
     public void onMBtnConstraintAdvancedTestClicked() {
         Intent intent = new Intent(this, ConstraintAdvancedActivity.class);
         startActivity(intent);
+    }
+
+    @OnClick(R.id.btn_coordinator_test)
+    public void onMBtnCoordinatorTestClicked() {
+
+    }
+
+    @OnClick({R.id.btn_basic_activity, R.id.btn_bottom_navigation_activity, R.id.btn_fragment_view_model_activity, R.id.btn_fullscreen_activity,
+            R.id.btn_login_activity, R.id.btn_navigation_drawer_activity, R.id.btn_scrolling_activity, R.id.btn_settings_activity, R.id.btn_tabbed_activity})
+    public void onViewClicked(View view) {
+        Intent intent = null;
+        switch (view.getId()) {
+            case R.id.btn_basic_activity:
+                intent = new Intent(this, BasicActivity.class);
+                break;
+            case R.id.btn_bottom_navigation_activity:
+                intent = new Intent(this, BottomNavigationActivity.class);
+                break;
+            case R.id.btn_fragment_view_model_activity:
+                intent = new Intent(this, FragmentWithViewModelActivity.class);
+                break;
+            case R.id.btn_fullscreen_activity:
+                intent = new Intent(this, FullscreenActivity.class);
+                break;
+            case R.id.btn_login_activity:
+                intent = new Intent(this, LoginActivity.class);
+                break;
+            case R.id.btn_navigation_drawer_activity:
+                intent = new Intent(this, NavigationDrawerActivity.class);
+                break;
+            case R.id.btn_scrolling_activity:
+                intent = new Intent(this, ScrollingActivity.class);
+                break;
+            case R.id.btn_settings_activity:
+                intent = new Intent(this, SettingsActivity.class);
+                break;
+            case R.id.btn_tabbed_activity:
+                intent = new Intent(this, TabbedActivity.class);
+                break;
+            default:
+                break;
+        }
+        if (intent != null) {
+            startActivity(intent);
+        }
     }
 }
