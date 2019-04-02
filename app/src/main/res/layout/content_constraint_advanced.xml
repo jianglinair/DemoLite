@@ -114,4 +114,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.9"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_v"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_h"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <TextView
+        android:id="@+id/tv_fab2"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        android:background="#612"
+        android:gravity="center"
+        android:text="+"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_20"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/guideline_v"
+        app:layout_constraintTop_toTopOf="@+id/guideline_h"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
