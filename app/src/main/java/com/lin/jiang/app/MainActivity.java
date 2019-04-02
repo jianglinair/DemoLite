@@ -13,6 +13,7 @@ import com.lin.jiang.app.aidl.Book;
 import com.lin.jiang.app.aidl.BookIntentService;
 import com.lin.jiang.app.constraint.ConstraintAdvancedActivity;
 import com.lin.jiang.app.constraint.ConstraintLayoutActivity;
+import com.lin.jiang.app.coordinator.CoordinatorLayoutActivity;
 import com.lin.jiang.app.danmaku.DanmakuActivity;
 import com.lin.jiang.app.expandable.ExpandableTextViewActivity;
 import com.lin.jiang.app.seek.SeekImageActivity;
@@ -164,7 +165,8 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.btn_coordinator_test)
     public void onMBtnCoordinatorTestClicked() {
-
+        Intent intent = new Intent(this, CoordinatorLayoutActivity.class);
+        startActivity(intent);
     }
 
     @OnClick({R.id.btn_basic_activity, R.id.btn_bottom_navigation_activity, R.id.btn_fragment_view_model_activity, R.id.btn_fullscreen_activity,

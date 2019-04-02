@@ -7,7 +7,7 @@
     <string name="permission_label">芒果TV后台服务权限</string>
     <string name="permission_desc">芒果TV后台服务是芒果TV用于APP数据收集的服务</string>
     <string name="title_activity_constraint_advanced">ConstraintAdvancedActivity</string>
-    <string name="title_activity_bottom_navi">BottomNaviActivity</string>
+    <string name="title_activity_bottom_navigation">BottomNavigationActivity</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
@@ -197,4 +197,5 @@
     <string name="title_activity_tabbed">TabbedActivity</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_basic">BasicActivity</string>
+    <string name="title_activity_coordinator_layout">CoordinatorLayoutActivity</string>
 </resources>

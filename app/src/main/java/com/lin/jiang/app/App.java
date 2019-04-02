@@ -46,6 +46,6 @@ public class App extends Application {
                         return "ALog Formatter ArrayList { " + list.toString() + " }";
                     }
                 });
-        ALog.d(config.toString());
+//        ALog.d(config.toString());
     }
 }

@@ -24,7 +24,7 @@ public class AidlActivity extends AppCompatActivity {
 
     private IBookManager mBookManager;
 
-    private Handler mHandler = new Handler() {
+    private final Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
             switch (msg.what) {
