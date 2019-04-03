@@ -11,12 +11,6 @@ import android.widget.Toast;
 import com.lin.jiang.app.aidl.AidlActivity;
 import com.lin.jiang.app.aidl.Book;
 import com.lin.jiang.app.aidl.BookIntentService;
-import com.lin.jiang.app.constraint.ConstraintAdvancedActivity;
-import com.lin.jiang.app.constraint.ConstraintLayoutActivity;
-import com.lin.jiang.app.coordinator.CoordinatorLayoutActivity;
-import com.lin.jiang.app.danmaku.DanmakuActivity;
-import com.lin.jiang.app.expandable.ExpandableTextViewActivity;
-import com.lin.jiang.app.seek.SeekImageActivity;
 import com.lin.jiang.app.autocreated.BasicActivity;
 import com.lin.jiang.app.autocreated.BottomNavigationActivity;
 import com.lin.jiang.app.autocreated.FragmentWithViewModelActivity;
@@ -26,6 +20,13 @@ import com.lin.jiang.app.autocreated.NavigationDrawerActivity;
 import com.lin.jiang.app.autocreated.ScrollingActivity;
 import com.lin.jiang.app.autocreated.SettingsActivity;
 import com.lin.jiang.app.autocreated.TabbedActivity;
+import com.lin.jiang.app.constraint.ConstraintAdvancedActivity;
+import com.lin.jiang.app.constraint.ConstraintLayoutActivity;
+import com.lin.jiang.app.coordinator.CoordinatorLayoutActivity;
+import com.lin.jiang.app.coordinator.CoordinatorWithAppBarActivity;
+import com.lin.jiang.app.danmaku.DanmakuActivity;
+import com.lin.jiang.app.expandable.ExpandableTextViewActivity;
+import com.lin.jiang.app.seek.SeekImageActivity;
 
 import java.util.Objects;
 
@@ -76,6 +77,8 @@ public class MainActivity extends AppCompatActivity {
     Button mBtnSettingsActivity;
     @BindView(R.id.btn_tabbed_activity)
     Button mBtnTabbedActivity;
+    @BindView(R.id.btn_coordinator_with_app_bar_test)
+    Button mBtnCoordinatorWithAppBarTest;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -166,6 +169,12 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.btn_coordinator_test)
     public void onMBtnCoordinatorTestClicked() {
         Intent intent = new Intent(this, CoordinatorLayoutActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.btn_coordinator_with_app_bar_test)
+    public void onMBtnCoordinatorWithAppBarTestClicked() {
+        Intent intent = new Intent(this, CoordinatorWithAppBarActivity.class);
         startActivity(intent);
     }
 

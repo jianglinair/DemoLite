@@ -15,6 +15,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".coordinator.CoordinatorWithAppBarActivity"
+            android:label="@string/title_activity_coordinator_with_app_bar"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -34,8 +39,7 @@
         </activity>
         <activity android:name=".aidl.AidlActivity">
         </activity>
-        <activity
-            android:name=".constraint.ConstraintLayoutActivity">
+        <activity android:name=".constraint.ConstraintLayoutActivity">
         </activity>
         <activity
             android:name=".constraint.ConstraintAdvancedActivity"
@@ -85,10 +89,7 @@
         <activity
             android:name=".autocreated.BottomNavigationActivity"
             android:label="@string/title_activity_bottom_navigation">
-        </activity>
-
-
-        <!-- service -->
+        </activity> <!-- service -->
         <service
             android:name=".aidl.BookManagerService"
             android:enabled="true"

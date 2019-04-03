@@ -1,4 +1,4 @@
-package com.lin.jiang.app;
+package com.lin.jiang.app.widget;
 
 import android.content.Context;
 import android.graphics.Canvas;
