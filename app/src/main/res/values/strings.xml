@@ -199,4 +199,5 @@
     <string name="title_activity_basic">BasicActivity</string>
     <string name="title_activity_coordinator_layout">CoordinatorLayoutActivity</string>
     <string name="title_activity_coordinator_with_app_bar">CoordinatorWithAppBarActivity</string>
+    <string name="title_activity_material">MaterialActivity</string>
 </resources>

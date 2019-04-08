@@ -26,6 +26,7 @@ import com.lin.jiang.app.coordinator.CoordinatorLayoutActivity;
 import com.lin.jiang.app.coordinator.CoordinatorWithAppBarActivity;
 import com.lin.jiang.app.danmaku.DanmakuActivity;
 import com.lin.jiang.app.expandable.ExpandableTextViewActivity;
+import com.lin.jiang.app.material.MaterialActivity;
 import com.lin.jiang.app.seek.SeekImageActivity;
 
 import java.util.Objects;
@@ -40,25 +41,6 @@ import butterknife.OnClick;
  * @author Jiang Lin
  */
 public class MainActivity extends AppCompatActivity {
-    @BindView(R.id.btn_aidl_test)
-    Button mBtnAidlTest;
-    @BindView(R.id.btn_is_test)
-    Button mBtnIsTest;
-    @BindView(R.id.btn_dir_test)
-    Button mBtnDirTest;
-    @BindView(R.id.btn_constraint_test)
-    Button mBtnConstraintTest;
-    @BindView(R.id.btn_danmaku_test)
-    Button mBtnDanmakuTest;
-    @BindView(R.id.btn_expandable_tv_test)
-    Button mBtnExtvTest;
-    @BindView(R.id.btn_seek_img_test)
-    Button mBtnSeekImgTest;
-    @BindView(R.id.btn_constraint_advanced_test)
-    Button mBtnConstraintAdvancedTest;
-    @BindView(R.id.btn_coordinator_test)
-    Button mBtnCoordinatorTest;
-
     @BindView(R.id.btn_basic_activity)
     Button mBtnBasicActivity;
     @BindView(R.id.btn_bottom_navigation_activity)
@@ -77,8 +59,29 @@ public class MainActivity extends AppCompatActivity {
     Button mBtnSettingsActivity;
     @BindView(R.id.btn_tabbed_activity)
     Button mBtnTabbedActivity;
+
+    @BindView(R.id.btn_aidl_test)
+    Button mBtnAidlTest;
+    @BindView(R.id.btn_is_test)
+    Button mBtnIsTest;
+    @BindView(R.id.btn_dir_test)
+    Button mBtnDirTest;
+    @BindView(R.id.btn_constraint_test)
+    Button mBtnConstraintTest;
+    @BindView(R.id.btn_danmaku_test)
+    Button mBtnDanmakuTest;
+    @BindView(R.id.btn_expandable_tv_test)
+    Button mBtnExtvTest;
+    @BindView(R.id.btn_seek_img_test)
+    Button mBtnSeekImgTest;
+    @BindView(R.id.btn_constraint_advanced_test)
+    Button mBtnConstraintAdvancedTest;
+    @BindView(R.id.btn_coordinator_test)
+    Button mBtnCoordinatorTest;
     @BindView(R.id.btn_coordinator_with_app_bar_test)
     Button mBtnCoordinatorWithAppBarTest;
+    @BindView(R.id.btn_material_design_test)
+    Button mBtnMaterialDesignTest;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -111,6 +114,46 @@ public class MainActivity extends AppCompatActivity {
                 "getExternalFilesDir=" + externalFilesDir + "\n" +
                 "Environment.getExternalStorageDirectory=" + externalStorageDirectory + "\n" +
                 "Environment.getExternalStoragePublicDirectory=" + externalStoragePublicDirectory, Toast.LENGTH_LONG).show();
+    }
+
+    @OnClick({R.id.btn_basic_activity, R.id.btn_bottom_navigation_activity, R.id.btn_fragment_view_model_activity, R.id.btn_fullscreen_activity,
+            R.id.btn_login_activity, R.id.btn_navigation_drawer_activity, R.id.btn_scrolling_activity, R.id.btn_settings_activity, R.id.btn_tabbed_activity})
+    public void onViewClicked(View view) {
+        Intent intent = null;
+        switch (view.getId()) {
+            case R.id.btn_basic_activity:
+                intent = new Intent(this, BasicActivity.class);
+                break;
+            case R.id.btn_bottom_navigation_activity:
+                intent = new Intent(this, BottomNavigationActivity.class);
+                break;
+            case R.id.btn_fragment_view_model_activity:
+                intent = new Intent(this, FragmentWithViewModelActivity.class);
+                break;
+            case R.id.btn_fullscreen_activity:
+                intent = new Intent(this, FullscreenActivity.class);
+                break;
+            case R.id.btn_login_activity:
+                intent = new Intent(this, LoginActivity.class);
+                break;
+            case R.id.btn_navigation_drawer_activity:
+                intent = new Intent(this, NavigationDrawerActivity.class);
+                break;
+            case R.id.btn_scrolling_activity:
+                intent = new Intent(this, ScrollingActivity.class);
+                break;
+            case R.id.btn_settings_activity:
+                intent = new Intent(this, SettingsActivity.class);
+                break;
+            case R.id.btn_tabbed_activity:
+                intent = new Intent(this, TabbedActivity.class);
+                break;
+            default:
+                break;
+        }
+        if (intent != null) {
+            startActivity(intent);
+        }
     }
 
     @OnClick(R.id.btn_aidl_test)
@@ -178,43 +221,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    @OnClick({R.id.btn_basic_activity, R.id.btn_bottom_navigation_activity, R.id.btn_fragment_view_model_activity, R.id.btn_fullscreen_activity,
-            R.id.btn_login_activity, R.id.btn_navigation_drawer_activity, R.id.btn_scrolling_activity, R.id.btn_settings_activity, R.id.btn_tabbed_activity})
-    public void onViewClicked(View view) {
-        Intent intent = null;
-        switch (view.getId()) {
-            case R.id.btn_basic_activity:
-                intent = new Intent(this, BasicActivity.class);
-                break;
-            case R.id.btn_bottom_navigation_activity:
-                intent = new Intent(this, BottomNavigationActivity.class);
-                break;
-            case R.id.btn_fragment_view_model_activity:
-                intent = new Intent(this, FragmentWithViewModelActivity.class);
-                break;
-            case R.id.btn_fullscreen_activity:
-                intent = new Intent(this, FullscreenActivity.class);
-                break;
-            case R.id.btn_login_activity:
-                intent = new Intent(this, LoginActivity.class);
-                break;
-            case R.id.btn_navigation_drawer_activity:
-                intent = new Intent(this, NavigationDrawerActivity.class);
-                break;
-            case R.id.btn_scrolling_activity:
-                intent = new Intent(this, ScrollingActivity.class);
-                break;
-            case R.id.btn_settings_activity:
-                intent = new Intent(this, SettingsActivity.class);
-                break;
-            case R.id.btn_tabbed_activity:
-                intent = new Intent(this, TabbedActivity.class);
-                break;
-            default:
-                break;
-        }
-        if (intent != null) {
-            startActivity(intent);
-        }
+    @OnClick(R.id.btn_material_design_test)
+    public void onMBtnMaterialDesignTestClicked() {
+        Intent intent = new Intent(this, MaterialActivity.class);
+        startActivity(intent);
     }
 }

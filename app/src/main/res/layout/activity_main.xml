@@ -16,6 +16,85 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:text="AndroidStudio auto-created Activity"/>
+
+        <Button
+            android:id="@+id/btn_basic_activity"
+            style="@style/SimpleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BasicActivity"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/btn_bottom_navigation_activity"
+            style="@style/SimpleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BottomNavigationActivity"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/btn_fragment_view_model_activity"
+            style="@style/SimpleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FragmentWithViewModelActivity"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/btn_fullscreen_activity"
+            style="@style/SimpleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FullscreenActivity"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/btn_login_activity"
+            style="@style/SimpleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LoginActivity"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/btn_navigation_drawer_activity"
+            style="@style/SimpleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NavigationDrawerActivity"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/btn_scrolling_activity"
+            style="@style/SimpleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ScrollingActivity"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/btn_settings_activity"
+            style="@style/SimpleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SettingsActivity"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/btn_tabbed_activity"
+            style="@style/SimpleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TabbedActivity"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_30"
+            android:gravity="center"
             android:text="Project"/>
 
         <Button
@@ -140,85 +219,14 @@
             android:text="CoordinatorWithAppBar Test"
             android:textSize="20sp"/>
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_30"
-            android:gravity="center"
-            android:text="AndroidStudio auto-created Activity"/>
-
         <Button
-            android:id="@+id/btn_basic_activity"
+            android:id="@+id/btn_material_design_test"
             style="@style/SimpleButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="BasicActivity"
-            android:textSize="20sp"/>
-
-        <Button
-            android:id="@+id/btn_bottom_navigation_activity"
-            style="@style/SimpleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="BottomNavigationActivity"
-            android:textSize="20sp"/>
-
-        <Button
-            android:id="@+id/btn_fragment_view_model_activity"
-            style="@style/SimpleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="FragmentWithViewModelActivity"
-            android:textSize="20sp"/>
-
-        <Button
-            android:id="@+id/btn_fullscreen_activity"
-            style="@style/SimpleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="FullscreenActivity"
-            android:textSize="20sp"/>
-
-        <Button
-            android:id="@+id/btn_login_activity"
-            style="@style/SimpleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="LoginActivity"
-            android:textSize="20sp"/>
-
-        <Button
-            android:id="@+id/btn_navigation_drawer_activity"
-            style="@style/SimpleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="NavigationDrawerActivity"
-            android:textSize="20sp"/>
-
-        <Button
-            android:id="@+id/btn_scrolling_activity"
-            style="@style/SimpleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ScrollingActivity"
-            android:textSize="20sp"/>
-
-        <Button
-            android:id="@+id/btn_settings_activity"
-            style="@style/SimpleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="SettingsActivity"
-            android:textSize="20sp"/>
-
-        <Button
-            android:id="@+id/btn_tabbed_activity"
-            style="@style/SimpleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TabbedActivity"
-            android:textSize="20sp"/>
+            android:text="MaterialDesign Test"
+            android:textSize="20sp"
+            />
 
     </LinearLayout>
 

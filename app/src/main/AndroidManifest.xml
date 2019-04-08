@@ -15,6 +15,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".material.MaterialActivity"
+            android:label="@string/title_activity_material"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
             android:name=".coordinator.CoordinatorWithAppBarActivity"
             android:label="@string/title_activity_coordinator_with_app_bar"
             android:theme="@style/AppTheme.NoActionBar">
