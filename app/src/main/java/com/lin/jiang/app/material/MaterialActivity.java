@@ -27,7 +27,7 @@ public class MaterialActivity extends AppCompatActivity {
          * 现在不推荐使用 ActionBar，推荐使用 ToolBar；使用 ToolBar 之前需要禁用 ActionBar，
          * 禁用 ActionBar 方法：
          * 方法一：AndroidManifest.xml 文件中将 Activity 配置为 NoActionBar；
-         * 方法而：使用 Java 代码隐藏 ActionBar，代码如下
+         * 方法二：使用 Java 代码隐藏 ActionBar，代码如下
          * ActionBar actionBar = getSupportActionBar();
          * if (actionBar != null) {
          *    actionBar.hide();
