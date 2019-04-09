@@ -1,11 +1,15 @@
 package com.lin.jiang.app.material;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.lin.jiang.app.R;
+import com.lin.jiang.app.helper.StatusBarHelper;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -16,12 +20,22 @@ public class MaterialActivity extends AppCompatActivity {
 
     @BindView(R.id.tb_tool_bar)
     Toolbar mTbToolBar;
+    @BindView(R.id.v_status_bar_place_holder)
+    View mVStatusBarPlaceHolder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_material);
         ButterKnife.bind(this);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            //            StatusBarUtil.setColor(this, getColor(R.color.colorPrimaryDark), 0);
+            StatusBarHelper.translucent(this/*, getColor(R.color.colorPrimaryDark)*/);
+            ViewGroup.LayoutParams params = mVStatusBarPlaceHolder.getLayoutParams();
+            params.height = StatusBarHelper.getStatusBarHeight(this);
+            mVStatusBarPlaceHolder.setLayoutParams(params);
+            mVStatusBarPlaceHolder.setVisibility(View.VISIBLE);
+        }
 
         /*=========================================================================
          * 现在不推荐使用 ActionBar，推荐使用 ToolBar；使用 ToolBar 之前需要禁用 ActionBar，

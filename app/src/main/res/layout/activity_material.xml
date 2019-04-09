@@ -7,13 +7,21 @@
     android:layout_height="match_parent"
     tools:context=".material.MaterialActivity">
 
+    <View
+        android:id="@+id/v_status_bar_place_holder"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimaryDark"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"/>
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/tb_tool_bar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
         android:theme="@style/AppTheme.AppBarOverlay"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/v_status_bar_place_holder"
         app:popupTheme="@style/AppTheme.PopupOverlay"
         />
 
