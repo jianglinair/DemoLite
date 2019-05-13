@@ -15,6 +15,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".other.ScreenOrientationActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|locale|uiMode"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
             android:name=".material.MaterialActivity"
             android:label="@string/title_activity_material"
             android:theme="@style/AppTheme.NoActionBar">

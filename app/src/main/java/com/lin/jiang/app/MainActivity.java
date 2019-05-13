@@ -27,6 +27,7 @@ import com.lin.jiang.app.coordinator.CoordinatorWithAppBarActivity;
 import com.lin.jiang.app.danmaku.DanmakuActivity;
 import com.lin.jiang.app.expandable.ExpandableTextViewActivity;
 import com.lin.jiang.app.material.MaterialActivity;
+import com.lin.jiang.app.other.ScreenOrientationActivity;
 import com.lin.jiang.app.seek.SeekImageActivity;
 
 import java.util.Objects;
@@ -82,16 +83,49 @@ public class MainActivity extends AppCompatActivity {
     Button mBtnCoordinatorWithAppBarTest;
     @BindView(R.id.btn_material_design_test)
     Button mBtnMaterialDesignTest;
+    @BindView(R.id.btn_orientation_test)
+    Button mBtnOrientationTest;
+
+    @Override
+    public void onMultiWindowModeChanged(boolean isInMultiWindowMode) {
+        super.onMultiWindowModeChanged(isInMultiWindowMode);
+        Log.d("[jianglin]", "MainActivity.onMultiWindowModeChanged: isInMultiWindowMode=" + isInMultiWindowMode);
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d("[jianglin]", "MainActivity.onCreate: ");
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
         for (int i = 2; i < 10; i++) {
             BookIntentService.startActionAdd(this, new Book(i, "Book#" + i));
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("[jianglin]", "MainActivity.onResume: ");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d("[jianglin]", "MainActivity.onPause: ");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d("[jianglin]", "MainActivity.onStop: ");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("[jianglin]", "MainActivity.onDestroy: ");
     }
 
     private void printDir() {
@@ -224,6 +258,12 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.btn_material_design_test)
     public void onMBtnMaterialDesignTestClicked() {
         Intent intent = new Intent(this, MaterialActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.btn_orientation_test)
+    public void onViewClicked() {
+        Intent intent = new Intent(this, ScreenOrientationActivity.class);
         startActivity(intent);
     }
 }
