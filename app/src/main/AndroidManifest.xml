@@ -14,6 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".RxJavaTestActivity">
+        </activity>
         <activity
             android:name=".other.ScreenOrientationActivity"
             android:configChanges="orientation|keyboardHidden|screenSize|locale|uiMode"

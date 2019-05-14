@@ -85,6 +85,8 @@ public class MainActivity extends AppCompatActivity {
     Button mBtnMaterialDesignTest;
     @BindView(R.id.btn_orientation_test)
     Button mBtnOrientationTest;
+    @BindView(R.id.btn_rxjava_test)
+    Button mBtnRxjavaTest;
 
     @Override
     public void onMultiWindowModeChanged(boolean isInMultiWindowMode) {
@@ -152,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick({R.id.btn_basic_activity, R.id.btn_bottom_navigation_activity, R.id.btn_fragment_view_model_activity, R.id.btn_fullscreen_activity,
             R.id.btn_login_activity, R.id.btn_navigation_drawer_activity, R.id.btn_scrolling_activity, R.id.btn_settings_activity, R.id.btn_tabbed_activity})
-    public void onViewClicked(View view) {
+    public void onMBtnOrientationTestClicked(View view) {
         Intent intent = null;
         switch (view.getId()) {
             case R.id.btn_basic_activity:
@@ -262,8 +264,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @OnClick(R.id.btn_orientation_test)
-    public void onViewClicked() {
+    public void onMBtnOrientationTestClicked() {
         Intent intent = new Intent(this, ScreenOrientationActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.btn_rxjava_test)
+    public void onMBtnRxjavaTestClicked() {
+        Intent intent = new Intent(this, RxJavaTestActivity.class);
         startActivity(intent);
     }
 }
