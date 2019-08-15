@@ -14,7 +14,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RxJavaTestActivity">
+        <activity android:name=".scroll.ScrollerActivity">
+        </activity>
+        <activity android:name=".coordinator.CoordinatorViewPagerActivity">
+        </activity>
+        <activity android:name=".tv.TvActivity">
+        </activity>
+        <activity android:name=".tangram.TangramActivity">
+        </activity>
+        <activity android:name=".rx.RxJavaTestActivity">
         </activity>
         <activity
             android:name=".other.ScreenOrientationActivity"

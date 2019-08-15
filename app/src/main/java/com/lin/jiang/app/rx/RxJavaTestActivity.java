@@ -1,7 +1,9 @@
-package com.lin.jiang.app;
+package com.lin.jiang.app.rx;
 
 import android.os.Bundle;
 import android.util.Log;
+
+import com.lin.jiang.app.R;
 
 import java.util.ArrayList;
 import java.util.List;

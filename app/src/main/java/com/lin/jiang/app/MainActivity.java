@@ -23,12 +23,17 @@ import com.lin.jiang.app.autocreated.TabbedActivity;
 import com.lin.jiang.app.constraint.ConstraintAdvancedActivity;
 import com.lin.jiang.app.constraint.ConstraintLayoutActivity;
 import com.lin.jiang.app.coordinator.CoordinatorLayoutActivity;
+import com.lin.jiang.app.coordinator.CoordinatorViewPagerActivity;
 import com.lin.jiang.app.coordinator.CoordinatorWithAppBarActivity;
 import com.lin.jiang.app.danmaku.DanmakuActivity;
 import com.lin.jiang.app.expandable.ExpandableTextViewActivity;
 import com.lin.jiang.app.material.MaterialActivity;
 import com.lin.jiang.app.other.ScreenOrientationActivity;
+import com.lin.jiang.app.rx.RxJavaTestActivity;
+import com.lin.jiang.app.scroll.ScrollerActivity;
 import com.lin.jiang.app.seek.SeekImageActivity;
+import com.lin.jiang.app.tangram.TangramActivity;
+import com.lin.jiang.app.tv.TvActivity;
 
 import java.util.Objects;
 
@@ -42,62 +47,18 @@ import butterknife.OnClick;
  * @author Jiang Lin
  */
 public class MainActivity extends AppCompatActivity {
-    @BindView(R.id.btn_basic_activity)
-    Button mBtnBasicActivity;
-    @BindView(R.id.btn_bottom_navigation_activity)
-    Button mBtnBottomNavigationActivity;
-    @BindView(R.id.btn_fragment_view_model_activity)
-    Button mBtnFragmentViewModelActivity;
-    @BindView(R.id.btn_fullscreen_activity)
-    Button mBtnFullscreenActivity;
-    @BindView(R.id.btn_login_activity)
-    Button mBtnLoginActivity;
-    @BindView(R.id.btn_navigation_drawer_activity)
-    Button mBtnNavigationDrawerActivity;
-    @BindView(R.id.btn_scrolling_activity)
-    Button mBtnScrollingActivity;
-    @BindView(R.id.btn_settings_activity)
-    Button mBtnSettingsActivity;
-    @BindView(R.id.btn_tabbed_activity)
-    Button mBtnTabbedActivity;
 
-    @BindView(R.id.btn_aidl_test)
-    Button mBtnAidlTest;
-    @BindView(R.id.btn_is_test)
-    Button mBtnIsTest;
-    @BindView(R.id.btn_dir_test)
-    Button mBtnDirTest;
-    @BindView(R.id.btn_constraint_test)
-    Button mBtnConstraintTest;
-    @BindView(R.id.btn_danmaku_test)
-    Button mBtnDanmakuTest;
-    @BindView(R.id.btn_expandable_tv_test)
-    Button mBtnExtvTest;
-    @BindView(R.id.btn_seek_img_test)
-    Button mBtnSeekImgTest;
-    @BindView(R.id.btn_constraint_advanced_test)
-    Button mBtnConstraintAdvancedTest;
-    @BindView(R.id.btn_coordinator_test)
-    Button mBtnCoordinatorTest;
-    @BindView(R.id.btn_coordinator_with_app_bar_test)
-    Button mBtnCoordinatorWithAppBarTest;
-    @BindView(R.id.btn_material_design_test)
-    Button mBtnMaterialDesignTest;
-    @BindView(R.id.btn_orientation_test)
-    Button mBtnOrientationTest;
-    @BindView(R.id.btn_rxjava_test)
-    Button mBtnRxjavaTest;
+    @BindView(R.id.btn_coordinator_viewpager_test)
+    Button mBtnCoordinatorViewpagerTest;
 
     @Override
     public void onMultiWindowModeChanged(boolean isInMultiWindowMode) {
         super.onMultiWindowModeChanged(isInMultiWindowMode);
-        Log.d("[jianglin]", "MainActivity.onMultiWindowModeChanged: isInMultiWindowMode=" + isInMultiWindowMode);
     }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d("[jianglin]", "MainActivity.onCreate: ");
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
@@ -109,25 +70,21 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d("[jianglin]", "MainActivity.onResume: ");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d("[jianglin]", "MainActivity.onPause: ");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.d("[jianglin]", "MainActivity.onStop: ");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d("[jianglin]", "MainActivity.onDestroy: ");
     }
 
     private void printDir() {
@@ -154,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick({R.id.btn_basic_activity, R.id.btn_bottom_navigation_activity, R.id.btn_fragment_view_model_activity, R.id.btn_fullscreen_activity,
             R.id.btn_login_activity, R.id.btn_navigation_drawer_activity, R.id.btn_scrolling_activity, R.id.btn_settings_activity, R.id.btn_tabbed_activity})
-    public void onMBtnOrientationTestClicked(View view) {
+    public void onViewClicked(View view) {
         Intent intent = null;
         switch (view.getId()) {
             case R.id.btn_basic_activity:
@@ -274,4 +231,29 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, RxJavaTestActivity.class);
         startActivity(intent);
     }
+
+    @OnClick(R.id.btn_tangram_test)
+    public void onMBtnTangramTestClicked() {
+        Intent intent = new Intent(this, TangramActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.btn_textview_test)
+    public void onMBtnTextviewTestClicked() {
+        Intent intent = new Intent(this, TvActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.btn_coordinator_viewpager_test)
+    public void onMBtnCoordinatorViewpagerTestClicked() {
+        Intent intent = new Intent(this, CoordinatorViewPagerActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.btn_scroller_test)
+    public void onMBtnScrollerTestClicked() {
+        Intent intent = new Intent(this, ScrollerActivity.class);
+        startActivity(intent);
+    }
+
 }

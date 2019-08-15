@@ -35,9 +35,7 @@ dependencies {
     implementation 'androidx.vectordrawable:vectordrawable:1.1.0-beta01'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0-alpha01'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.2.0-beta01'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0-beta01'
+
     // danmaku
 //    implementation project(path: ':danmaku')
     implementation 'com.github.ctiao:DanmakuFlameMaster:0.9.25'
@@ -53,4 +51,12 @@ dependencies {
     // RxJava2
     implementation 'io.reactivex.rxjava2:rxjava:2.2.8'
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    // tangram
+    implementation 'com.alibaba.android:tangram:3.3.6@aar'
+    // picasso
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0-beta01'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0-beta01'
 }

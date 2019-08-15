@@ -16,6 +16,158 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:text="Project"/>
+
+        <Button
+            android:id="@+id/btn_scroller_test"
+            style="@style/SimpleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scroller Test"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/btn_aidl_test"
+            style="@style/SimpleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AIDL Test"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/btn_is_test"
+            style="@style/SimpleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IntentService Test"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/btn_dir_test"
+            style="@style/SimpleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DIR Test"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/btn_danmaku_test"
+            style="@style/SimpleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Danmaku Test"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/btn_expandable_tv_test"
+            style="@style/SimpleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ExpandableTextView Test"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/btn_seek_img_test"
+            style="@style/SimpleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SeekImage Test"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/btn_constraint_test"
+            style="@style/SimpleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ConstraintLayout Test"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/btn_constraint_advanced_test"
+            style="@style/SimpleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ConstraintLayout Advanced"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/btn_coordinator_test"
+            style="@style/SimpleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CoordinatorLayout Test"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/btn_coordinator_with_app_bar_test"
+            style="@style/SimpleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CoordinatorWithAppBar Test"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/btn_material_design_test"
+            style="@style/SimpleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MaterialDesign Test"
+            android:textSize="20sp"
+            />
+
+        <Button
+            android:id="@+id/btn_orientation_test"
+            style="@style/SimpleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ScreenOrientation Test"
+            android:textSize="20sp"
+            />
+
+        <Button
+            android:id="@+id/btn_rxjava_test"
+            style="@style/SimpleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RxJava Test"
+            android:textSize="20sp"
+            />
+
+        <Button
+            android:id="@+id/btn_tangram_test"
+            style="@style/SimpleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tangram Test"
+            android:textSize="20sp"
+            />
+
+        <Button
+            android:id="@+id/btn_textview_test"
+            style="@style/SimpleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView onPreDraw测试"
+            android:textSize="20sp"
+            />
+
+        <Button
+            android:id="@+id/btn_coordinator_viewpager_test"
+            style="@style/SimpleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CoordinatorLayout+ViewPager测试，竖屏播放器"
+            android:textSize="20sp"
+            />
+
+
+
+        <!-- AS 自动生成的示例 -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="AndroidStudio auto-created Activity"/>
 
         <Button
@@ -89,162 +241,6 @@
             android:layout_height="wrap_content"
             android:text="TabbedActivity"
             android:textSize="20sp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_30"
-            android:gravity="center"
-            android:text="Project"/>
-
-        <Button
-            android:id="@+id/btn_aidl_test"
-            style="@style/SimpleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="AIDL Test"
-            android:textSize="20sp"/>
-
-        <Button
-            android:id="@+id/btn_is_test"
-            style="@style/SimpleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="IntentService Test"
-            android:textSize="20sp"/>
-
-        <View
-            android:id="@+id/divider"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?android:attr/listDivider"
-            />
-
-        <Button
-            android:id="@+id/btn_dir_test"
-            style="@style/SimpleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="DIR Test"
-            android:textSize="20sp"/>
-
-        <View
-            android:id="@+id/divider2"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?android:attr/listDivider"
-            />
-
-        <Button
-            android:id="@+id/btn_danmaku_test"
-            style="@style/SimpleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Danmaku Test"
-            android:textSize="20sp"/>
-
-        <View
-            android:id="@+id/divider3"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?android:attr/listDivider"
-            />
-
-        <Button
-            android:id="@+id/btn_expandable_tv_test"
-            style="@style/SimpleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ExpandableTextView Test"
-            android:textSize="20sp"/>
-
-        <View
-            android:id="@+id/divider4"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?android:attr/listDivider"
-            />
-
-        <Button
-            android:id="@+id/btn_seek_img_test"
-            style="@style/SimpleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="SeekImage Test"
-            android:textSize="20sp"/>
-
-        <View
-            android:id="@+id/divider5"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?android:attr/listDivider"
-            />
-
-        <Button
-            android:id="@+id/btn_constraint_test"
-            style="@style/SimpleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ConstraintLayout Test"
-            android:textSize="20sp"/>
-
-        <Button
-            android:id="@+id/btn_constraint_advanced_test"
-            style="@style/SimpleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ConstraintLayout Advanced"
-            android:textSize="20sp"/>
-
-        <View
-            android:id="@+id/divider6"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?android:attr/listDivider"
-            />
-
-        <Button
-            android:id="@+id/btn_coordinator_test"
-            style="@style/SimpleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CoordinatorLayout Test"
-            android:textSize="20sp"/>
-
-        <Button
-            android:id="@+id/btn_coordinator_with_app_bar_test"
-            style="@style/SimpleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CoordinatorWithAppBar Test"
-            android:textSize="20sp"/>
-
-        <Button
-            android:id="@+id/btn_material_design_test"
-            style="@style/SimpleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="MaterialDesign Test"
-            android:textSize="20sp"
-            />
-
-        <Button
-            android:id="@+id/btn_orientation_test"
-            style="@style/SimpleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ScreenOrientation Test"
-            android:textSize="20sp"
-            />
-
-        <Button
-            android:id="@+id/btn_rxjava_test"
-            style="@style/SimpleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="RxJava Test"
-            android:textSize="20sp"
-            />
 
     </LinearLayout>
 

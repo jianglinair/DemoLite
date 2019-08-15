@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.lin.jiang.app.scroll.ScrollerLayout
+    android:id="@+id/layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".scroll.ScrollerActivity">
+
+    <Button
+        android:id="@+id/btn_first"
+        style="@style/SimpleButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_100"
+        android:text="First Tab"/>
+
+    <Button
+        android:id="@+id/btn_second"
+        style="@style/SimpleButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_100"
+        android:text="Second Tab"/>
+
+    <Button
+        android:id="@+id/btn_third"
+        style="@style/SimpleButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_100"
+        android:text="Third Tab"/>
+
+</com.lin.jiang.app.scroll.ScrollerLayout>
