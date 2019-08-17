@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.lin.jiang.app.aidl.AidlActivity;
 import com.lin.jiang.app.aidl.Book;
 import com.lin.jiang.app.aidl.BookIntentService;
+import com.lin.jiang.app.anim.AnimationActivity;
 import com.lin.jiang.app.autocreated.BasicActivity;
 import com.lin.jiang.app.autocreated.BottomNavigationActivity;
 import com.lin.jiang.app.autocreated.FragmentWithViewModelActivity;
@@ -253,6 +254,12 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.btn_scroller_test)
     public void onMBtnScrollerTestClicked() {
         Intent intent = new Intent(this, ScrollerActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.btn_anim_test)
+    public void onMBtnAnimTestClicked() {
+        Intent intent = new Intent(this, AnimationActivity.class);
         startActivity(intent);
     }
 

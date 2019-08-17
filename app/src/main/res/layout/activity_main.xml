@@ -19,6 +19,14 @@
             android:text="Project"/>
 
         <Button
+            android:id="@+id/btn_anim_test"
+            style="@style/SimpleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Animation Test"
+            android:textSize="20sp"/>
+
+        <Button
             android:id="@+id/btn_scroller_test"
             style="@style/SimpleButton"
             android:layout_width="wrap_content"
