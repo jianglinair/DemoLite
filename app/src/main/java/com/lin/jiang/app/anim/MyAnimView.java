@@ -8,9 +8,8 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
-import android.view.animation.Animation;
+import android.view.animation.BounceInterpolator;
 
 import androidx.annotation.Nullable;
 
@@ -65,12 +64,13 @@ public class MyAnimView extends View {
         ValueAnimator animator = ValueAnimator.ofObject(new PointEvaluator(), start, end);
         animator.addUpdateListener(animation -> {
             mCurPoint = (Point) animation.getAnimatedValue();
-//            invalidate();
+            //            invalidate();
         });
         animator.setRepeatCount(ValueAnimator.INFINITE);
         ObjectAnimator animator1 = ObjectAnimator.ofObject(this, "color", new ColorEvaluator(), "#0000FF", "#FF0000");
         animator1.setRepeatCount(ValueAnimator.INFINITE);
         AnimatorSet set = new AnimatorSet();
+        set.setInterpolator(new BounceInterpolator());
         set.setDuration(5000);
         set.play(animator).with(animator1);
         set.start();

@@ -6,6 +6,9 @@ import android.os.Bundle;
 
 import com.lin.jiang.app.R;
 
+/**
+ * ValueAnimator, ObjectAnimator, ViewPropertyAnimator, TimeInterpolator, TypeEvaluator
+ */
 public class PropertyAnimationActivity extends AppCompatActivity {
 
     @Override
