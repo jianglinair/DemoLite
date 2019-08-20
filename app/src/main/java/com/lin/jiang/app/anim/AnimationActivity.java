@@ -1,12 +1,17 @@
 package com.lin.jiang.app.anim;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
+import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.lin.jiang.app.R;
 
@@ -57,6 +62,59 @@ public class AnimationActivity extends AppCompatActivity {
                 drawable.start();
             }
             isStarted = !isStarted;
+        });
+
+        /*=========================================================================
+         * view.getTranslationX() = view.getX() - view.getLeft();
+         * 在view的位置没有偏移时，view.getX() = view.getLeft()，偏移后 getX() 的值改变但是
+         * getLeft() 的返回值是不变的。
+         *========================================================================*/
+        Button btnProperty = findViewById(R.id.btn_property);
+        ObjectAnimator moveIn = ObjectAnimator.ofFloat(ivGif, "translationX", 0, 300);
+        ObjectAnimator rotate = ObjectAnimator.ofFloat(ivGif, "rotation", 0, 360);
+        ObjectAnimator fadeInOut = ObjectAnimator.ofFloat(ivGif, "alpha", 1, 0, 1);
+        moveIn.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                Log.d("[jianglin]", "AnimationActivity.onAnimationEnd: moveIn");
+            }
+
+            @Override
+            public void onAnimationStart(Animator animation) {
+                Log.d("[jianglin]", "AnimationActivity.onAnimationStart: moveIn");
+            }
+        });
+        rotate.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                Log.d("[jianglin]", "AnimationActivity.onAnimationEnd: rotate");
+            }
+
+            @Override
+            public void onAnimationStart(Animator animation) {
+                Log.d("[jianglin]", "AnimationActivity.onAnimationStart: rotate");
+            }
+        });
+        AnimatorSet animatorSet = new AnimatorSet();
+        animatorSet.play(rotate).with(fadeInOut).after(moveIn);
+        animatorSet.setDuration(3000);
+        btnProperty.setOnClickListener(v -> {
+            Log.d("[jianglin]", "AnimationActivity.onCreate: " + ivGif.getX());
+            Log.d("[jianglin]", "AnimationActivity.onCreate: " + ivGif.getLeft());
+            Log.d("[jianglin]", "AnimationActivity.onCreate: " + ivGif.getTranslationX());
+            animatorSet.start();
+            ivGif.postDelayed(() -> {
+                Log.d("[jianglin]", "AnimationActivity.onCreate: " + ivGif.getX());
+                Log.d("[jianglin]", "AnimationActivity.onCreate: " + ivGif.getLeft());
+                Log.d("[jianglin]", "AnimationActivity.onCreate: " + ivGif.getTranslationX());
+            }, 7000);
+        });
+
+
+        Button btn2 = findViewById(R.id.btn_property2);
+        btn2.setOnClickListener(v -> {
+            Intent intent = new Intent(this, PropertyAnimationActivity.class);
+            startActivity(intent);
         });
     }
 }
