@@ -111,9 +111,15 @@ public class AnimationActivity extends AppCompatActivity {
         });
 
 
-        Button btn2 = findViewById(R.id.btn_property2);
-        btn2.setOnClickListener(v -> {
-            Intent intent = new Intent(this, PropertyAnimationActivity.class);
+        Button btnProperty2 = findViewById(R.id.btn_property2);
+        btnProperty2.setOnClickListener(v -> {
+            Intent intent = new Intent(this, PropertyAnimation2Activity.class);
+            startActivity(intent);
+        });
+
+        Button btnProperty3 = findViewById(R.id.btn_property3);
+        btnProperty3.setOnClickListener(v -> {
+            Intent intent = new Intent(this, PropertyAnimation3Activity.class);
             startActivity(intent);
         });
     }

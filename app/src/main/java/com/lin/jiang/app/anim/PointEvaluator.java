@@ -1,7 +1,6 @@
 package com.lin.jiang.app.anim;
 
 import android.animation.TypeEvaluator;
-import android.util.Log;
 
 /**
  * Created by JiangLin.<br>

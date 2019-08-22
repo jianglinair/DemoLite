@@ -9,7 +9,7 @@ import com.lin.jiang.app.R;
 /**
  * ValueAnimator, ObjectAnimator, ViewPropertyAnimator, TimeInterpolator, TypeEvaluator
  */
-public class PropertyAnimationActivity extends AppCompatActivity {
+public class PropertyAnimation2Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

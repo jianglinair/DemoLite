@@ -90,6 +90,17 @@
         app:layout_constraintStart_toStartOf="@+id/btn_property"
         app:layout_constraintTop_toBottomOf="@+id/btn_property"/>
 
+    <Button
+        android:id="@+id/btn_property3"
+        style="@style/SimpleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="属性动画进阶"
+        app:layout_constraintEnd_toEndOf="@+id/btn_property2"
+        app:layout_constraintStart_toStartOf="@+id/btn_property2"
+        app:layout_constraintTop_toBottomOf="@+id/btn_property2"/>
+
     <ImageView
         android:id="@+id/iv_gif"
         android:layout_width="wrap_content"

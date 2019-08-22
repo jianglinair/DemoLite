@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".anim.PropertyAnimationActivity">
+    tools:context=".anim.PropertyAnimation2Activity">
 
     <com.lin.jiang.app.anim.MyAnimView
         android:id="@+id/mav"

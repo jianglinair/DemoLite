@@ -14,7 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".anim.PropertyAnimationActivity">
+        <activity android:name=".anim.PropertyAnimation3Activity">
+        </activity>
+        <activity android:name=".anim.PropertyAnimation2Activity">
         </activity>
         <activity android:name=".anim.AnimationActivity">
         </activity>
