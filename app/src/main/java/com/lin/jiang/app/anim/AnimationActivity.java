@@ -128,5 +128,11 @@ public class AnimationActivity extends AppCompatActivity {
             Intent intent = new Intent(this, PropertyAnimation4Activity.class);
             startActivity(intent);
         });
+
+        Button btnProperty5 = findViewById(R.id.btn_property5);
+        btnProperty5.setOnClickListener(v -> {
+            Intent intent = new Intent(this, PropertyAnimation5Activity.class);
+            startActivity(intent);
+        });
     }
 }

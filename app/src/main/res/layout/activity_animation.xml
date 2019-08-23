@@ -111,11 +111,22 @@
         app:layout_constraintStart_toStartOf="@+id/btn_frame"
         app:layout_constraintTop_toTopOf="@+id/btn_property2"/>
 
+    <Button
+        android:id="@+id/btn_property5"
+        style="@style/SimpleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="属性动画进阶"
+        app:layout_constraintEnd_toEndOf="@+id/btn_property4"
+        app:layout_constraintStart_toStartOf="@+id/btn_property4"
+        app:layout_constraintTop_toBottomOf="@+id/btn_property4"/>
+
     <ImageView
         android:id="@+id/iv_gif"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
