@@ -5,13 +5,35 @@ buildscript {
     repositories {
         google()
         jcenter()
+        mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.0'
-        
+        classpath 'com.android.tools.build:gradle:3.5.0'
+        // AOP 插件
+        classpath 'org.aspectj:aspectjtools:1.8.13'
+        classpath 'org.aspectj:aspectjweaver:1.8.13'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
+    }
+    ext {
+        //android appcompat支持库版本
+//        androidSupportVersion = '26.1.0'
+        //编译的 SDK 版本，如API20
+        compileSdkVersion = 28
+        //构建工具的版本，其中包括了打包工具aapt、dx等,如API20对应的build-tool的版本就是20.0.0
+        buildToolsVersion = "26.0.2"
+        //兼容的最低 SDK 版本
+        minSdkVersion = 15
+        //向前兼容，保存新旧两种逻辑，并通过 if-else 方法来判断执行哪种逻辑
+        targetSdkVersion = 28
+        //kotlin版本号
+//        kotlin_version = '1.2.10'
+
+//        kotlinVersion = "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+//        appcompatV7 = "com.android.support:appcompat-v7:$androidSupportVersion"
+//        appcompatDesign = "com.android.support:design:$androidSupportVersion"
+//        constraintLayout = 'com.android.support.constraint:constraint-layout:1.0.2'
     }
 }
 
@@ -19,6 +41,7 @@ allprojects {
     repositories {
         google()
         jcenter()
+        mavenCentral()
     }
 }
 
