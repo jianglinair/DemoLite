@@ -24,6 +24,7 @@ android {
         sourceCompatibility '1.8'
         targetCompatibility '1.8'
     }
+    buildToolsVersion = '28.0.3'
 }
 
 dependencies {
@@ -62,6 +63,7 @@ dependencies {
     // AOP面向切面编程，加入这行就不用在libs下引入jar包了，不然要写成compile file(libs/aspectjrt.jar)
     implementation 'org.aspectj:aspectjrt:1.8.13'
 }
+
 
 // 只有一个 app module 时配置 AOP aspectj 的方法
 import org.aspectj.bridge.IMessage
