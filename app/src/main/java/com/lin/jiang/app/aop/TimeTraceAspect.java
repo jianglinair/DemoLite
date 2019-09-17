@@ -11,21 +11,21 @@ import org.aspectj.lang.reflect.MethodSignature;
 /**
  * Created by JiangLin.<br>
  * Date: 2019/09/17 11:01<br>
- * Description: MethodTimeCalculatorAspect 方法耗时计算注解切面类<br>
+ * Description: TimeTraceAspect 方法耗时计算注解切面类<br>
  * <a href="https://www.google.com">文档地址</a>
  * <p>
- * {@link MethodTimeCalculator}
+ * {@link TimeTrace}
  *
  * @author JiangLin
  */
 @Aspect
-public class MethodTimeCalculatorAspect {
+public class TimeTraceAspect {
 
-    @Pointcut("execution(@com.lin.jiang.app.aop.MethodTimeCalculator * *(..))")
-    public void methodTimeCalculatorBehavior() {
+    @Pointcut("execution(@com.lin.jiang.app.aop.TimeTrace * *(..))")
+    public void timeTraceBehavior() {
     }
 
-    @Around("methodTimeCalculatorBehavior()")
+    @Around("timeTraceBehavior()")
     public Object wavePointcutAround(ProceedingJoinPoint joinPoint) throws Throwable {
         MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
         // 类名
@@ -33,7 +33,7 @@ public class MethodTimeCalculatorAspect {
         // 方法名
         String methodName = methodSignature.getName();
         // 功能名
-        MethodTimeCalculator behaviorTrace = methodSignature.getMethod().getAnnotation(MethodTimeCalculator.class);
+        TimeTrace behaviorTrace = methodSignature.getMethod().getAnnotation(TimeTrace.class);
         String value = behaviorTrace.value();
         long start = System.currentTimeMillis();
         Object result = joinPoint.proceed();

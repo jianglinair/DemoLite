@@ -12,7 +12,7 @@ import com.lin.jiang.app.aidl.AidlActivity;
 import com.lin.jiang.app.aidl.Book;
 import com.lin.jiang.app.aidl.BookIntentService;
 import com.lin.jiang.app.anim.AnimationActivity;
-import com.lin.jiang.app.aop.MethodTimeCalculator;
+import com.lin.jiang.app.aop.TimeTrace;
 import com.lin.jiang.app.autocreated.BasicActivity;
 import com.lin.jiang.app.autocreated.BottomNavigationActivity;
 import com.lin.jiang.app.autocreated.FragmentWithViewModelActivity;
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    @MethodTimeCalculator
+    @TimeTrace
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
