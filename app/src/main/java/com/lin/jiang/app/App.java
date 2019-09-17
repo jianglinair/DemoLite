@@ -15,10 +15,16 @@ import java.util.ArrayList;
  * @author JiangLin
  */
 public class App extends Application {
+    private static App sApp;
     @Override
     public void onCreate() {
         super.onCreate();
-        initALog();
+        sApp = this;
+//        initALog();
+    }
+
+    public static Application getContext() {
+        return sApp;
     }
 
     private void initALog() {
